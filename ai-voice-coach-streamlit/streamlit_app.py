@@ -6,9 +6,9 @@ st.set_page_config(page_title="AI Voice Coach – Demo & Pitch", page_icon="🎧
 USE_DIRECT = st.secrets.get("USE_DIRECT", os.getenv("USE_DIRECT", "false")).lower() == "true"
 BACKEND_URL = st.secrets.get("BACKEND_URL", os.getenv("BACKEND_URL", "http://localhost:8080"))
 
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY", ""))
+OPENAI_API_KEY = st.secrets.get("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", os.getenv("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", ""))
 OPENAI_MODEL = st.secrets.get("OPENAI_MODEL", os.getenv("OPENAI_MODEL", "gpt-4o-mini"))
-ELEVEN_API_KEY = st.secrets.get("ELEVENLABS_API_KEY", os.getenv("ELEVENLABS_API_KEY", ""))
+ELEVEN_API_KEY = st.secrets.get("sk_66af65078024ca7dd9a841066d45dcd55ee70453d9f3be10", os.getenv("sk_66af65078024ca7dd9a841066d45dcd55ee70453d9f3be10", ""))
 ELEVEN_VOICE_ID = st.secrets.get("ELEVENLABS_VOICE_ID", os.getenv("ELEVENLABS_VOICE_ID", "21m00Tcm4TlvDq8ikWAM"))
 
 def pitch_script():
