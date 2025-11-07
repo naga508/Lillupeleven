@@ -26,7 +26,7 @@ def pitch_script():
 
 def openai_chat(prompt: str) -> str:
     url = "https://api.openai.com/v1/chat/completions"
-    headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
+    headers = {"Authorization": f"Bearer {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}"}
     payload = {"model": OPENAI_MODEL, "messages": [{"role": "user", "content": prompt}], "temperature": 0.6}
     with httpx.Client(timeout=60) as client:
         r = client.post(url, headers=headers, json=payload)
@@ -35,7 +35,7 @@ def openai_chat(prompt: str) -> str:
 
 def elevenlabs_tts(text: str) -> bytes:
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVEN_VOICE_ID}"
-    headers = {"xi-api-key": ELEVEN_API_KEY, "accept": "audio/mpeg", "content-type": "application/json"}
+    headers = {"xi-api-key": sk_66af65078024ca7dd9a841066d45dcd55ee70453d9f3be10, "accept": "audio/mpeg", "content-type": "application/json"}
     payload = {"text": text, "model_id": "eleven_multilingual_v2",
                "voice_settings": {"stability": 0.5, "similarity_boost": 0.7}}
     with httpx.Client(timeout=120) as client:
